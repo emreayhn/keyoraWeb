@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyora — Your passwords. Only yours.</title>
+  <meta name="description" content="Keyora is a free, open-source Windows password manager that keeps your passwords only on your own computer, encrypted with Argon2id and Fernet. No cloud, no account, no internet connection.">
+  <meta name="theme-color" content="#15101e">
+  <meta name="color-scheme" content="dark">
+  <link rel="alternate" hreflang="tr" href="/">
+  <link rel="alternate" hreflang="en" href="/en/">
+  <link rel="alternate" hreflang="x-default" href="/en/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/keyora.png">
+  <meta property="og:title" content="Keyora — Your passwords. Only yours.">
+  <meta property="og:description" content="A free, open-source, fully offline password manager for Windows.">
+  <meta property="og:image" content="/assets/main-dark.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/main.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/en/"><img src="/assets/keyora.png" alt="" width="30" height="30">Keyora</a>
+    <nav class="nav" aria-label="Main menu">
+      <a class="hide-md" href="#features">Features</a>
+      <a class="hide-md" href="#security">Security</a>
+      <a class="hide-md" href="#faq">FAQ</a>
+      <a class="lang" href="/" hreflang="tr" lang="tr" aria-label="Türkçe">TR</a>
+      <a class="btn primary" href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow rise d1">For Windows · Free · Open source</span>
+        <h1 class="rise d2">Your passwords.<br><em>Only yours.</em></h1>
+        <p class="lede rise d3">Keyora keeps your passwords encrypted on your own computer, not on some company's server. No cloud, no account, no subscription — and it never connects to the internet.</p>
+        <div class="cta rise d4">
+          <a class="btn primary" href="https://github.com/emreayhn/keyora/releases/download/v1.2.0/Keyora-Setup-1.2.0.exe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn" href="https://github.com/emreayhn/keyora">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+            Source code
+          </a>
+        </div>
+        <p class="cta-note rise d5">v1.2.0 · Windows 10 / 11 · 64-bit · MIT license · App interface in Turkish</p>
+        <div class="zeros rise d6">
+          <div><b>0</b><span>servers</span></div>
+          <div><b>0</b><span>accounts</span></div>
+          <div><b>0</b><span>bytes out</span></div>
+        </div>
+      </div>
+
+      <div class="stage rise d4">
+        <div class="phone">
+          <video id="promo" src="/assets/media/keyora-tanitim.mp4" poster="/assets/media/keyora-tanitim-poster.jpg"
+                 autoplay muted loop playsinline preload="metadata"
+                 aria-label="Keyora promo video (in Turkish): main screen, password generator, new entry and security features"></video>
+          <div class="vctl">
+          <button class="vbtn" id="playpause" type="button" data-state="playing"
+                  aria-label="Pause video" data-pause="Pause video" data-play="Play video">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="pause-i" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/><path class="play-i" d="M7 4.5v15l12.5-7.5z"/></svg>
+          </button>
+          <button class="vbtn" id="sound" type="button" aria-pressed="false" aria-label="Sound">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/><path class="off" d="m22 9-6 6m0-6 6 6"/></svg>
+            <span>Sound</span>
+          </button>
+          </div>
+        </div>
+        <div class="chip c1" aria-hidden="true">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <span><small>Encryption</small><strong>AES · Fernet</strong></span>
+        </div>
+        <div class="chip c2" aria-hidden="true">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span>
+          <span><small>Key</small><strong>Argon2id</strong></span>
+        </div>
+        <div class="chip c3" aria-hidden="true">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M12 11v4l2 2"/></svg></span>
+          <span><small>Clipboard</small><strong>Cleared in 20 s</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="problem">
+    <div class="wrap">
+      <span class="eyebrow reveal">Why Keyora?</span>
+      <ul class="questions">
+        <li><span>What if the company shuts down?</span></li>
+        <li><span>What if the server gets breached?</span></li>
+        <li><span>What if your account is deleted?</span></li>
+      </ul>
+      <div class="answer reveal">
+        <img src="/assets/keyora.png" alt="" width="56" height="56">
+        <p>Most password managers keep your passwords on their own servers. With Keyora, none of these questions apply to you: <strong>your vault never leaves your computer</strong>, and its only key is the master password that only you know.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT ============ -->
+  <section>
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Interface</span>
+        <h2>All your passwords, <em>at a glance.</em></h2>
+        <p class="lede">Simple, fast and keyboard-friendly. Passwords in the list are masked; the eye icon shows one for 10 seconds.</p>
+      </div>
+      <figure class="window reveal">
+        <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>Keyora</span></div>
+        <div class="shot-wrap">
+          <img src="/assets/main-dark.png" width="1375" height="800" loading="lazy"
+               alt="Keyora main window: categories on the left, entry rows with app name, username and masked password on the right">
+          <span class="pin p1" aria-hidden="true">1</span>
+          <span class="pin p2" aria-hidden="true">2</span>
+          <span class="pin p3" aria-hidden="true">3</span>
+          <span class="pin p4" aria-hidden="true">4</span>
+        </div>
+      </figure>
+      <ol class="notes reveal">
+        <li><strong>Instant search</strong>Filters as you type an app or username; categories and favorites on the left.</li>
+        <li><strong>One-click copy</strong>Username or password; whatever you copy is wiped from the clipboard after 20 seconds and never lands in Win+V history.</li>
+        <li><strong>10-second peek</strong>Shows a password when you need to see it, then masks it again after 10 seconds.</li>
+        <li><strong>One-key lock</strong>Ctrl+L or the Lock button; when Windows locks, Keyora locks too.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow">Features</span>
+        <h2>Everything you expect from a password manager. <em>Except the cloud.</em></h2>
+      </div>
+      <div class="bento">
+        <article class="tile lead-tile reveal">
+          <span class="big-num" aria-hidden="true">0</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/><path d="m4 4 16 16"/></svg></span>
+          <h3>Never goes online.</h3>
+          <p>No update checks, no usage statistics, no crash reports. Your vault is a single file on your computer, not tied to any server, account or subscription.</p>
+        </article>
+        <article class="tile reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+          <h3>Locks when Windows locks</h3>
+          <p>Win+L, sleep or a dropped remote desktop session lock the vault immediately. It also locks itself when you're idle.</p>
+        </article>
+        <article class="tile reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="m4 4 16 16"/></svg></span>
+          <h3>Invisible when screen sharing</h3>
+          <p>Screenshot and recording tools can't see the Keyora window. On by default (before Windows 10 2004 the window shows up black).</p>
+        </article>
+        <article class="tile reveal">
+          <span class="big-num" aria-hidden="true">20</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/></svg></span>
+          <h3>Clean clipboard</h3>
+          <p>Copied passwords are wiped in 20 seconds and never reach Win+V history or cloud clipboard.</p>
+        </article>
+        <article class="tile reveal">
+          <span class="big-num" aria-hidden="true">10</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
+          <h3>Automatic backups</h3>
+          <p>An encrypted backup once a day when you open the vault, and when you lock it after changes. The last 10 are kept by default.</p>
+        </article>
+        <article class="tile reveal">
+          <span class="big-num" aria-hidden="true">5</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></span>
+          <h3>Password history</h3>
+          <p>The last 5 passwords of every entry are kept, so you can recover one you changed by mistake.</p>
+        </article>
+        <article class="tile wide reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/><path d="m17 15 2 2 3-4"/></svg></span>
+          <h3>Strong password generator</h3>
+          <p>Pick the length and character types; passwords come from the operating system's secure random number generator.</p>
+        </article>
+        <article class="tile wide reveal">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></span>
+          <h3>Dark and light themes, shortcuts</h3>
+          <p>Switch instantly between pastel dark and light themes. Ctrl+N new entry, Ctrl+G generator, Ctrl+H password health.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECURITY ============ -->
+  <section id="security" class="security">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow">Security</span>
+        <h2>How your key <em>is born.</em></h2>
+        <p class="lede">Keyora doesn't invent its own cryptography; it relies on widely used, well-reviewed libraries.</p>
+      </div>
+
+      <div class="kdf reveal" role="img" aria-label="The master password is never stored. It goes through two separate Argon2id runs, each with its own salt: one produces a verification hash that only checks whether the password is right, the other produces the encryption key with 64 MB of memory and 3 passes, never written to disk. That key encrypts your entries with Fernet (AES-128-CBC + HMAC-SHA256).">
+        <div class="node root"><small>You</small><strong>Master password</strong><p>Never stored anywhere.</p></div>
+        <div class="fork"></div>
+        <div class="branches">
+          <div class="branch">
+            <div class="node"><small>Argon2id · salt 1</small><strong>Verification hash</strong><p>Only answers "is the password right?"</p></div>
+          </div>
+          <div class="branch">
+            <div class="node"><small>Argon2id · salt 2</small><strong>Encryption key</strong><p>64 MB memory, 3 passes. Not written to disk.</p></div>
+            <div class="wire"></div>
+            <div class="node ok"><small>Fernet</small><strong>Encrypted entries</strong><p>AES-128-CBC + HMAC-SHA256</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div class="fact reveal"><b>What's encrypted?</b><p>Passwords, app names, usernames, notes and category names. The contents can't be read without your master password.</p></div>
+        <div class="fact reveal"><b>Brute-force protection</b><p>After 3 wrong attempts, the wait grows with each try (up to 5 minutes). Restarting the app doesn't reset it.</p></div>
+        <div class="fact reveal"><b>Open source</b><p>All of the code is on GitHub. Anyone can read and audit what it does.</p></div>
+      </div>
+      <p class="warn reveal"><strong>By design:</strong> if you forget your master password, your vault cannot be opened in any way. There is no recovery email and no back door. Keep your master password somewhere safe.</p>
+    </div>
+  </section>
+
+  <!-- ============ HEALTH + IMPORT ============ -->
+  <section>
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Password Health</span>
+          <h2>See which passwords <em>need changing.</em></h2>
+          <p class="lede">The report scans your vault and lists the entries that need attention; it's calculated entirely on your computer. Double-click an entry to fix it right away.</p>
+          <ul class="checks">
+            <li><span><strong>Weak</strong> — short or using too few character types</span></li>
+            <li><span><strong>Reused</strong> — the same password on more than one account</span></li>
+            <li><span><strong>Old</strong> — not changed for a year</span></li>
+          </ul>
+        </div>
+        <div class="window tilt reveal">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>Password Health</span></div>
+          <img src="/assets/health-dark.png" width="900" height="650" loading="lazy" alt="Password Health report: a 70 percent health score with tabs for weak, reused and old passwords">
+        </div>
+      </div>
+
+      <div class="split flip">
+        <div class="reveal">
+          <span class="eyebrow">Import</span>
+          <h2>Move your passwords over <em>in minutes.</em></h2>
+          <p class="lede">Pick the export file from the app you use now. Keyora detects the format, shows a preview first, skips duplicates and makes a backup before importing.</p>
+          <div class="chips">
+            <span>Chrome</span><span>Edge</span><span>Brave</span><span>Firefox</span><span>Bitwarden</span><span>KeePassXC</span><span>KeePass 2</span><span>LastPass</span><span>CSV</span>
+          </div>
+        </div>
+        <div class="window tilt reveal">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>Import</span></div>
+          <img src="/assets/import-dark.png" width="900" height="750" loading="lazy" alt="Import window: format guide and a table of expected columns">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOWNLOAD ============ -->
+  <section id="download" class="download">
+    <div class="wrap">
+      <div class="band reveal">
+        <img class="k" src="/assets/keyora.png" alt="" width="76" height="76">
+        <h2>Take your passwords <em>back.</em></h2>
+        <p class="lede">Free. No sign-up, account or email required. No administrator rights needed to install.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/emreayhn/keyora/releases/download/v1.2.0/Keyora-Setup-1.2.0.exe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+            Installer (recommended)
+          </a>
+          <a class="btn" href="https://github.com/emreayhn/keyora/releases/download/v1.2.0/Keyora.exe">Portable .exe</a>
+        </div>
+        <p class="alt">Windows 10 (1809) or 11, 64-bit · <a href="https://github.com/emreayhn/keyora/releases">All versions and release notes</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions, answered</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Where is my data stored?</summary>
+          <p>Your vault lives in <code>%LOCALAPPDATA%\Keyora\keyora.db</code>, inside your Windows user folder. Wherever you install the app, it uses the same file. Your entries are encrypted and can't be read without your master password.</p>
+        </details>
+        <details>
+          <summary>Is there cloud sync or a phone app?</summary>
+          <p>No, on purpose. The point of Keyora is that your passwords never leave your computer. To move to another computer, carry a backup file over yourself: install Keyora there, create a temporary vault, then restore the backup from Ayarlar → Yedekleme → Yedekten Geri Yükle (Settings → Backup → Restore from Backup). The restored vault opens with the master password it had when the backup was made.</p>
+        </details>
+        <details>
+          <summary>Windows warns about an "unknown publisher". Is it safe?</summary>
+          <p>The warning appears because the file isn't signed with a paid code-signing certificate; it says nothing about the app itself. Choose "More info → Run anyway" to continue. The full source code is public on GitHub.</p>
+        </details>
+        <details>
+          <summary>Will uninstalling delete my passwords?</summary>
+          <p>No. Uninstalling removes only the program; your vault and backups stay where they are, and reinstalling opens the same vault. To remove everything, delete the <code>%LOCALAPPDATA%\Keyora</code> folder yourself. If you chose a different backup folder in Settings, delete that too.</p>
+        </details>
+        <details>
+          <summary>I use Keyora 1.0.0. How do I upgrade?</summary>
+          <p>Just run the new installer; your vault is found automatically. On first sign-in it's converted to the new format, and a backup is made automatically before the conversion. Afterwards, delete any old 1.0.0 exe copies, since the old version can't read the converted vault correctly. The pre-conversion backup is in the old format, so its app names, usernames, notes and category names are in plain text; once you're happy with the new version, delete it from Ayarlar → Yedekleme → Eski Yedeği Sil (Settings → Backup → Delete Old Backup).</p>
+        </details>
+        <details>
+          <summary>Can I store two-factor (2FA) codes?</summary>
+          <p>No. Keeping passwords and 2FA codes in the same place defeats the purpose of the second factor. That's why 2FA codes are deliberately left out when importing, and Keyora tells you how many were skipped.</p>
+        </details>
+        <details>
+          <summary>Does it cost anything? Any ads or data collection?</summary>
+          <p>Keyora is free and open source under the MIT license. It has no ads, collects no data and never goes online. This page has no ads or visitor-tracking scripts either.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="/en/"><img src="/assets/keyora.png" alt="" width="30" height="30">Keyora</a>
+    <nav aria-label="Footer menu">
+      <a href="https://github.com/emreayhn/keyora">GitHub</a>
+      <a href="https://github.com/emreayhn/keyora/releases">Releases</a>
+      <a href="/" hreflang="tr" lang="tr">Türkçe</a>
+    </nav>
+    <span>© 2026 Emre Ayhan · MIT license</span>
+  </div>
+</footer>
+
+</body>
+</html>
