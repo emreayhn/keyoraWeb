@@ -31,16 +31,19 @@ Sayfanın tek işi: ziyaretçiyi **"şifrelerim neden bir şirketin sunucusunda?
 | text / textMuted / textDim | `#f7eef2` / `#b9a8c2` / `#7c6c8f` | metin hiyerarşisi (textDim yalnızca süs; okunacak metinde kullanma) |
 | success | `#a5e8c4` | "0 bayt dışarı" gibi olumlu durumlar |
 
-- **Tipografi:** Uygulama yalnızca Windows'ta çalıştığı için Windows'un kendi fontları kullanılır;
-  dışarıdan font indirilmez. Başlık: `Sitka Display` (yedek: Georgia, serif) — vurgulu kelime italik +
-  accent degrade. Gövde: `Segoe UI Variable Text`, `Segoe UI`. Teknik etiketler: `Cascadia Mono`, `Consolas`.
+- **Tipografi:** Fontlar sitede barındırılır (`assets/fonts/`, woff2, latin + latin-ext alt kümeleri,
+  OFL lisansları yanında; CSP `font-src 'self'`). Google Fonts'a ya da başka CDN'e bağlantı verilmez.
+  Başlık: `Fraunces` (değişken, opsz + 400–700, italik) — vurgulu kelime italik + accent degrade.
+  Gövde: `Instrument Sans` (400–700). Teknik etiketler: `Cascadia Mono`, `Consolas` (sistem).
+  Inter, Roboto, Arial, Space Grotesk kullanma. Yeni font eklerken Türkçe karakterleri (ş ğ ı İ ç ö ü) kontrol et;
+  `text-transform: uppercase` olan etiketlerde "Argon2id" gibi İngilizce terimleri `lang="en"` ile sar (yoksa "ARGON2İD" olur).
 - **Atmosfer:** koyu mürdüm zemin, pembe radyal parıltılar, ince tanecik (grain, `assets/noise.svg`),
   cam (glass) kartlar. Tek, iyi kurgulanmış yükleme animasyonu + kaydırınca beliren bölümler;
   `prefers-reduced-motion` açıksa animasyon ve otomatik video oynatma kapanır.
 
 ## 3. Doğrulanmış iddialar (yalnızca bunları kullan)
 
-Her iddia `C:\gitHub\keyora` kodunda doğrulandı (sürüm 1.2.0). Yeni iddia eklemeden önce koda bak.
+Her iddia `C:\gitHub\keyora` kodunda doğrulandı (sürüm 1.2.1). Yeni iddia eklemeden önce koda bak.
 
 - İnternete hiç bağlanmaz: güncelleme denetimi, istatistik, hata raporu yok.
 - Kayıtların **içeriği** şifreli (şifre, uygulama adı, kullanıcı adı, notlar, kategori adları).

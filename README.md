@@ -30,5 +30,5 @@ python -m http.server 8000 --directory public
 
 ## Yeni sürümde
 
-İki sayfadaki sürüm numarasını ve indirme bağlantılarını (`v1.2.0`, `Keyora-Setup-1.2.0.exe`) güncelle.
+İki sayfadaki sürüm numarasını ve indirme bağlantılarını (`v1.2.1`, `Keyora-Setup-1.2.1.exe`) güncelle.
 Metin değiştirirken `.claude/skills/keyora-pazarlama/SKILL.md`'deki doğrulanmış iddialar listesine uy.

@@ -1,6 +1,39 @@
 /* Keyora — tanıtım sayfası
    Görsel dil tanıtım videosundan: koyu mürdüm, pembe parıltı, cam kartlar.
-   Dış kaynak yok: fontlar Windows'un kendi fontları (uygulama yalnızca Windows'ta çalışır). */
+   Dış kaynak yok: başlık Fraunces, gövde Instrument Sans — ikisi de assets/fonts/ altında (OFL). */
+
+/* Fontlar sitede barındırılır (CSP: font-src 'self'), lisanslar fonts/OFL-*.txt.
+   Türkçe: ı latin, ş ğ İ latin-ext alt kümesinde; tarayıcı yalnızca gerekeni indirir. */
+@font-face {
+  font-family: "Fraunces"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("fonts/fraunces-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("fonts/fraunces-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Fraunces"; font-style: italic; font-weight: 400 700; font-display: swap;
+  src: url("fonts/fraunces-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces"; font-style: italic; font-weight: 400 700; font-display: swap;
+  src: url("fonts/fraunces-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Instrument Sans"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("fonts/instrument-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Sans"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("fonts/instrument-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 
 :root {
   --bg: #15101e;
@@ -17,8 +50,8 @@
   --dim: #7c6c8f;
   --success: #a5e8c4;
 
-  --f-display: "Sitka Display", "Sitka Heading", "Sitka", Georgia, "Times New Roman", serif;
-  --f-body: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --f-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --f-body: "Instrument Sans", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
   --f-mono: "Cascadia Mono", "Cascadia Code", Consolas, ui-monospace, monospace;
 
   --radius: 18px;

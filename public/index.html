@@ -17,6 +17,8 @@
   <meta property="og:image" content="/assets/main-dark.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
+  <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/main.js"></script>
 </head>
@@ -45,7 +47,7 @@
         <h1 class="rise d2">Şifreleriniz,<br><em>sadece sizin.</em></h1>
         <p class="lede rise d3">Keyora, şifrelerinizi bir şirketin sunucusunda değil, kendi bilgisayarınızda şifreleyerek saklar. Bulut yok, hesap yok, abonelik yok — ve internete hiç bağlanmaz.</p>
         <div class="cta rise d4">
-          <a class="btn primary" href="https://github.com/emreayhn/keyora/releases/download/v1.2.0/Keyora-Setup-1.2.0.exe">
+          <a class="btn primary" href="https://github.com/emreayhn/keyora/releases/download/v1.2.1/Keyora-Setup-1.2.1.exe">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
             Windows için indir
           </a>
@@ -54,7 +56,7 @@
             Kaynak kodu
           </a>
         </div>
-        <p class="cta-note rise d5">v1.2.0 · Windows 10 / 11 · 64-bit · MIT lisansı</p>
+        <p class="cta-note rise d5">v1.2.1 · Windows 10 / 11 · 64-bit · MIT lisansı</p>
         <div class="zeros rise d6">
           <div><b>0</b><span>sunucu</span></div>
           <div><b>0</b><span>hesap</span></div>
@@ -208,10 +210,10 @@
         <div class="fork"></div>
         <div class="branches">
           <div class="branch">
-            <div class="node"><small>Argon2id · tuz 1</small><strong>Doğrulama özeti</strong><p>Yalnızca "şifre doğru mu?" sorusunu yanıtlar.</p></div>
+            <div class="node"><small><span lang="en">Argon2id</span> · tuz 1</small><strong>Doğrulama özeti</strong><p>Yalnızca "şifre doğru mu?" sorusunu yanıtlar.</p></div>
           </div>
           <div class="branch">
-            <div class="node"><small>Argon2id · tuz 2</small><strong>Şifreleme anahtarı</strong><p>64 MB bellek, 3 tur. Diske yazılmaz.</p></div>
+            <div class="node"><small><span lang="en">Argon2id</span> · tuz 2</small><strong>Şifreleme anahtarı</strong><p>64 MB bellek, 3 tur. Diske yazılmaz.</p></div>
             <div class="wire"></div>
             <div class="node ok"><small>Fernet</small><strong>Şifreli kayıtlar</strong><p>AES-128-CBC + HMAC-SHA256</p></div>
           </div>
@@ -272,11 +274,10 @@
         <h2>Şifrelerinizi <em>geri alın.</em></h2>
         <p class="lede">Ücretsiz. Kayıt, hesap ya da e-posta gerekmez. Kurulum yönetici izni istemez.</p>
         <div class="cta">
-          <a class="btn primary" href="https://github.com/emreayhn/keyora/releases/download/v1.2.0/Keyora-Setup-1.2.0.exe">
+          <a class="btn primary" href="https://github.com/emreayhn/keyora/releases/download/v1.2.1/Keyora-Setup-1.2.1.exe">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
-            Kurulum sihirbazı (önerilen)
+            Keyora'yı indir
           </a>
-          <a class="btn" href="https://github.com/emreayhn/keyora/releases/download/v1.2.0/Keyora.exe">Taşınabilir .exe</a>
         </div>
         <p class="alt">Windows 10 (1809) veya 11, 64-bit · <a href="https://github.com/emreayhn/keyora/releases">Tüm sürümler ve sürüm notları</a></p>
       </div>
