@@ -282,7 +282,7 @@ section { position: relative; padding: 120px 0; }
   display: grid; place-items: center; font: 700 13px/1 var(--f-mono); color: #1a1024;
   background: var(--accent); box-shadow: 0 0 0 6px rgba(240, 165, 188, .25), 0 8px 20px rgba(0, 0, 0, .5);
 }
-.pin.p1 { left: 24%; top: 10%; } .pin.p2 { left: 64.6%; top: 23.75%; }
+.pin.p1 { left: 49%; top: 10%; } .pin.p2 { left: 68.2%; top: 23.75%; }
 .pin.p3 { left: 87.1%; top: 23.75%; } .pin.p4 { left: 5.2%; top: 90%; }
 .notes { list-style: none; margin: 36px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; counter-reset: n; }
 .notes li { counter-increment: n; position: relative; padding-top: 44px; color: var(--muted); font-size: 15.5px; }
