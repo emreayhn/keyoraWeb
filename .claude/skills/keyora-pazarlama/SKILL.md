@@ -17,7 +17,7 @@ Sayfanın tek işi: ziyaretçiyi **"şifrelerim neden bir şirketin sunucusunda?
 - **Kişilik:** küçük, dürüst, kontrol kullanıcıda. "Biz" yerine ürünü ve kullanıcıyı öne çıkar.
 - **Yasak kelimeler:** "kırılamaz", "%100 güvenli", "askeri düzey", "hacklenemez", "en iyi".
 
-## 2. Görsel dil (tanıtım videosundan — `keyoraVideo/src/Keyora/constants.ts`)
+## 2. Görsel dil (tanıtım videosundan — `keyoraVideo/keyora-tur` HyperFrames projesi, eski Remotion projesi `keyoraVideo/keyoraVideo`)
 
 | Token | Renk | Kullanım |
 |---|---|---|

@@ -174,9 +174,9 @@ h2 em, h1 em {
 @media (max-width: 480px) { .zeros { gap: 20px; } }
 
 /* telefon çerçevesinde video */
-.stage { position: relative; display: flex; justify-content: center; padding: 10px 0; }
+.stage { position: relative; display: flex; justify-content: center; padding: 10px 0 66px; }
 .phone {
-  position: relative; width: min(330px, 74vw); aspect-ratio: 9 / 19.2; border-radius: 46px; padding: 11px;
+  position: relative; width: min(330px, 74vw); aspect-ratio: 9 / 15.55; /* iç ekran ≈ 9:16, video kırpılmaz */ border-radius: 46px; padding: 11px;
   background: linear-gradient(160deg, #3b2d55, #1b1428 40%, #2c2140);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, .06),
@@ -190,7 +190,7 @@ h2 em, h1 em {
   content: ""; position: absolute; top: 22px; left: 50%; transform: translateX(-50%);
   width: 92px; height: 24px; border-radius: 20px; background: #0d0913;
 }
-.vctl { position: absolute; right: 22px; bottom: 26px; z-index: 2; display: flex; gap: 8px; }
+.vctl { position: absolute; right: 18px; bottom: -58px; z-index: 2; display: flex; gap: 8px; } /* telefonun altında: altyazıyı örtmez */
 .vbtn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 38px; min-width: 38px; padding: 0 12px; border-radius: 999px;
   background: rgba(21, 16, 30, .72); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, .16);
@@ -222,7 +222,7 @@ h2 em, h1 em {
 .chip .ico svg { width: 18px; height: 18px; }
 .chip.c1 { left: -4%; top: 14%; }
 .chip.c2 { right: -6%; top: 46%; animation-delay: -2.4s; }
-.chip.c3 { left: 2%; bottom: 9%; animation-delay: -4.6s; }
+.chip.c3 { left: 2%; bottom: 24%; animation-delay: -4.6s; } /* videonun altyazı bandına binmez */
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 @media (max-width: 960px) { .chip.c1 { left: 2%; } .chip.c2 { right: 2%; } .chip.c3 { left: 6%; } }
 @media (max-width: 480px) { .chip { padding: 9px 12px; } .chip .ico { display: none; } .chip strong { font-size: 13.5px; } .chip.c1 { left: 0; } .chip.c2 { right: 0; } .chip.c3 { left: 0; } }
