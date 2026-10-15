@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Keyora — Şifreleriniz, sadece sizin.</title>
   <meta name="description" content="Keyora, şifrelerinizi yalnızca kendi bilgisayarınızda, Argon2id ve Fernet ile şifreleyerek saklayan ücretsiz ve açık kaynak bir Windows parola yöneticisidir. Bulut yok, hesap yok, internet bağlantısı yok.">
-  <meta name="theme-color" content="#15101e">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#f3edf0">
+  <meta name="color-scheme" content="light">
   <link rel="alternate" hreflang="tr" href="/">
   <link rel="alternate" hreflang="en" href="/en/">
   <link rel="alternate" hreflang="x-default" href="/en/">
@@ -19,279 +19,180 @@
   <meta property="og:locale" content="tr_TR">
   <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cascadia-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/main.js"></script>
 </head>
 <body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
 
-<header class="topbar">
+<header class="top">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/keyora.png" alt="" width="30" height="30">Keyora</a>
-    <nav class="nav" aria-label="Ana menü">
-      <a class="hide-md" href="#ozellikler">Özellikler</a>
-      <a class="hide-md" href="#guvenlik">Güvenlik</a>
-      <a class="hide-md" href="#sss">SSS</a>
-      <a class="lang" href="/en/" hreflang="en" lang="en" aria-label="English">EN</a>
-      <a class="btn primary" href="#indir">İndir</a>
+    <nav aria-label="Ana menü">
+      <a class="hide-sm" href="#nasil">Nasıl çalışır</a>
+      <a class="hide-sm" href="#guvenlik">Güvenlik</a>
+      <a class="hide-sm" href="#sss">Sorular</a>
+      <a href="/en/" hreflang="en" lang="en">English</a>
+      <a class="btn small" href="#indir">İndir</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <!-- ============ HERO ============ -->
+<main id="icerik">
   <section class="hero">
-    <div class="grid-lines" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
+    <div class="wrap">
       <div>
-        <span class="eyebrow rise d1">Windows için · Ücretsiz · Açık kaynak</span>
-        <h1 class="rise d2">Şifreleriniz,<br><em>sadece sizin.</em></h1>
-        <p class="lede rise d3">Keyora, şifrelerinizi bir şirketin sunucusunda değil, kendi bilgisayarınızda şifreleyerek saklar. Bulut yok, hesap yok, abonelik yok — ve internete hiç bağlanmaz.</p>
-        <div class="cta rise d4">
-          <a class="btn primary" href="https://github.com/emreayhn/keyora/releases/download/v1.2.1/Keyora-Setup-1.2.1.exe">
+        <h1>Şifreleriniz nerede?</h1>
+        <p class="addr" data-type>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h5l2 2.5h8A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/></svg>
+          <span class="path">C:\<wbr><b>Users</b>\<wbr><b>siz</b>\<wbr><b>AppData</b>\<wbr><b>Local</b>\<wbr><b>Keyora</b>\<wbr><b class="db">keyora.db</b></span>
+        </p>
+        <p class="answer">Keyora'da cevap bu kadar kısa: <strong>kendi bilgisayarınızda, bu dosyada.</strong> Kayıtlarınızın içeriği şifrelidir ve onu yalnızca sizin bildiğiniz master password açar. Bulut, hesap ya da abonelik yok; Keyora internete hiç bağlanmaz.</p>
+        <div class="cta">
+          <a class="btn" href="https://github.com/emreayhn/keyora/releases/download/v1.2.1/Keyora-Setup-1.2.1.exe">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
             Windows için indir
           </a>
-          <a class="btn" href="https://github.com/emreayhn/keyora">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
-            Kaynak kodu
-          </a>
+          <a class="link" href="https://github.com/emreayhn/keyora">Kaynak kodunu GitHub'da okuyun</a>
         </div>
-        <p class="cta-note rise d5">v1.2.1 · Windows 10 / 11 · 64-bit · MIT lisansı</p>
-        <div class="zeros rise d6">
-          <div><b>0</b><span>sunucu</span></div>
-          <div><b>0</b><span>hesap</span></div>
-          <div><b>0</b><span>bayt dışarı</span></div>
-        </div>
+        <p class="fine">Sürüm 1.2.1, Windows 10 (1809) ve 11 için, 64 bit. Ücretsiz ve MIT lisanslı. Kurulum yönetici izni istemez.</p>
       </div>
 
-      <div class="stage rise d4">
-        <div class="phone">
-          <video id="promo" src="/assets/media/keyora-tanitim.mp4" poster="/assets/media/keyora-tanitim-poster.jpg"
-                 autoplay muted loop playsinline preload="metadata"
-                 aria-label="Keyora tanıtım videosu: kilit ekranı, kayıt listesi, pano temizleme, şifre sağlığı ve içe aktarma"></video>
-          <div class="vctl">
-          <button class="vbtn" id="playpause" type="button" data-state="playing"
-                  aria-label="Videoyu duraklat" data-pause="Videoyu duraklat" data-play="Videoyu oynat">
+      <figure class="film">
+        <video id="promo" src="/assets/media/keyora-tur-kare.mp4" poster="/assets/media/keyora-tur-kare-poster.jpg"
+               autoplay muted loop playsinline preload="metadata" width="800" height="800"
+               aria-label="Keyora tanıtım videosu: kilit ekranı, kayıt listesi, pano temizleme, şifre sağlığı ve içe aktarma"></video>
+        <figcaption>
+          <button class="vbtn" id="playpause" type="button" data-state="playing" aria-label="Videoyu duraklat" data-pause="Videoyu duraklat" data-play="Videoyu oynat">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="pause-i" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/><path class="play-i" d="M7 4.5v15l12.5-7.5z"/></svg>
           </button>
-          <button class="vbtn" id="sound" type="button" aria-pressed="false" aria-label="Ses">
+          <button class="vbtn" id="sound" type="button" aria-pressed="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/><path class="off" d="m22 9-6 6m0-6 6 6"/></svg>
-            <span>Ses</span>
+            Ses
           </button>
-          </div>
-        </div>
-        <div class="chip c1" aria-hidden="true">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-          <span><small>Şifreleme</small><strong>AES · Fernet</strong></span>
-        </div>
-        <div class="chip c2" aria-hidden="true">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span>
-          <span><small>Anahtar</small><strong>Argon2id</strong></span>
-        </div>
-        <div class="chip c3" aria-hidden="true">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M12 11v4l2 2"/></svg></span>
-          <span><small>Pano</small><strong>20 sn'de silinir</strong></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SORUN ============ -->
-  <section class="problem">
-    <div class="wrap">
-      <span class="eyebrow reveal">Neden Keyora?</span>
-      <ul class="questions">
-        <li><span>Şirket kapanırsa?</span></li>
-        <li><span>Sunucu saldırıya uğrarsa?</span></li>
-        <li><span>Hesabınız silinirse?</span></li>
-      </ul>
-      <div class="answer reveal">
-        <img src="/assets/keyora.png" alt="" width="56" height="56">
-        <p>Çoğu parola yöneticisi şifrelerinizi kendi sunucularında tutar. Keyora'da bu soruların hiçbiri sizi ilgilendirmez: <strong>kasanız bilgisayarınızdan hiç çıkmaz</strong>, anahtarı yalnızca sizin bildiğiniz master password'dür.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ÜRÜN ============ -->
-  <section>
-    <div class="wrap">
-      <div class="head reveal">
-        <span class="eyebrow">Arayüz</span>
-        <h2>Tüm şifreleriniz, <em>tek bakışta.</em></h2>
-        <p class="lede">Sade, hızlı ve klavye dostu. Listede şifreler maskeli; göz simgesine basınca 10 saniyeliğine görünür.</p>
-      </div>
-      <figure class="window reveal">
-        <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>Keyora</span></div>
-        <div class="shot-wrap">
-          <img src="/assets/main-dark.png" width="1375" height="800" loading="lazy"
-               alt="Keyora ana penceresi: solda kategoriler, sağda uygulama adı, kategori, kullanıcı adı ve maskeli şifreden oluşan kayıt satırları">
-          <span class="pin p1" aria-hidden="true">1</span>
-          <span class="pin p2" aria-hidden="true">2</span>
-          <span class="pin p3" aria-hidden="true">3</span>
-          <span class="pin p4" aria-hidden="true">4</span>
-        </div>
+        </figcaption>
       </figure>
-      <ol class="notes reveal">
-        <li><strong>Anında arama</strong>Uygulama adı, kullanıcı adı ya da kategoriyle yazarken süzülür; kategoriler ve favoriler solda.</li>
-        <li><strong>Tek tıkla kopyala</strong>Kullanıcı adı ya da şifre; kopyalanan 20 saniye sonra panodan silinir, Win+V geçmişine düşmez.</li>
-        <li><strong>10 saniyelik göz</strong>Şifreyi görmeniz gerekirse gösterir, 10 saniye sonra yeniden maskeler.</li>
-        <li><strong>Tek tuşla kilit</strong>Ctrl+L ya da Kilitle; Windows kilitlenince Keyora da kilitlenir.</li>
-      </ol>
     </div>
   </section>
 
-  <!-- ============ ÖZELLİKLER ============ -->
-  <section id="ozellikler">
+  <section class="tour" id="nasil" aria-labelledby="nasil-baslik">
     <div class="wrap">
-      <div class="head center reveal">
-        <span class="eyebrow">Özellikler</span>
-        <h2>Bir parola yöneticisinden beklediğiniz her şey. <em>Bulut hariç.</em></h2>
+      <div class="intro">
+        <h2 id="nasil-baslik">Bir parola yöneticisinden beklediğiniz her şey. Bulut hariç.</h2>
+        <p class="lede">Arayüz sade ve klavye dostu. Aşağıdaki ekranlar sahte kayıtlarla dolu bir deneme kasasından.</p>
       </div>
-      <div class="bento">
-        <article class="tile lead-tile reveal">
-          <span class="big-num" aria-hidden="true">0</span>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/><path d="m4 4 16 16"/></svg></span>
-          <h3>İnternete hiç bağlanmaz.</h3>
-          <p>Güncelleme denetimi yok, kullanım istatistiği yok, hata raporu yok. Kasanız bilgisayarınızdaki tek bir dosyadır; hiçbir sunucuya, hesaba ya da aboneliğe bağlı değildir.</p>
-        </article>
-        <article class="tile reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
-          <h3>Windows kilitlenince kilitlenir</h3>
-          <p>Win+L, uyku ya da uzak masaüstü kopması kasayı hemen kilitler. Boşta kalınca da kendiliğinden.</p>
-        </article>
-        <article class="tile reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="m4 4 16 16"/></svg></span>
-          <h3>Ekran paylaşımında görünmez</h3>
-          <p>Ekran görüntüsü ve kayıt araçları Keyora penceresini göremez. Varsayılan olarak açık (Windows 10 2004 öncesinde pencere siyah görünür).</p>
-        </article>
-        <article class="tile reveal">
-          <span class="big-num" aria-hidden="true">20</span>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/></svg></span>
-          <h3>Temiz pano</h3>
-          <p>Kopyalanan şifre 20 saniyede silinir; Win+V geçmişine ve bulut panosuna düşmez.</p>
-        </article>
-        <article class="tile reveal">
-          <span class="big-num" aria-hidden="true">10</span>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
-          <h3>Otomatik yedek</h3>
-          <p>Kasayı açınca günde bir kez, değişiklik yaptıysanız kilitlerken şifreli yedek. Varsayılan olarak son 10 yedek.</p>
-        </article>
-        <article class="tile reveal">
-          <span class="big-num" aria-hidden="true">5</span>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></span>
-          <h3>Şifre geçmişi</h3>
-          <p>Her kaydın son 5 şifresi saklanır; yanlışlıkla değiştirdiğinizi geri bulursunuz.</p>
-        </article>
-        <article class="tile wide reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/><path d="m17 15 2 2 3-4"/></svg></span>
-          <h3>Güçlü şifre üretici</h3>
-          <p>Uzunluğu ve karakter türlerini seçin; şifre, işletim sisteminin güvenli rastgele sayı üreteciyle oluşturulur.</p>
-        </article>
-        <article class="tile wide reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></span>
-          <h3>Koyu ve açık tema, kısayollar</h3>
-          <p>Pastel koyu ve açık tema arasında anında geçiş. Ctrl+N yeni kayıt, Ctrl+G üretici, Ctrl+H şifre sağlığı.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ GÜVENLİK ============ -->
-  <section id="guvenlik" class="security">
-    <div class="wrap">
-      <div class="head center reveal">
-        <span class="eyebrow">Güvenlik</span>
-        <h2>Anahtarınız <em>nasıl doğar?</em></h2>
-        <p class="lede">Keyora kendi şifreleme algoritmasını yazmaz; yaygın kullanılan, denetlenmiş kütüphanelere dayanır.</p>
-      </div>
-
-      <div class="kdf reveal" role="img" aria-label="Master password hiçbir yerde saklanmaz. İki ayrı Argon2id işleminden, her biri kendi tuzuyla geçer: biri yalnızca şifrenin doğruluğunu denetleyen doğrulama özetini, diğeri 64 MB bellek ve 3 turla diske yazılmayan şifreleme anahtarını üretir. Bu anahtar kayıtları Fernet (AES-128-CBC + HMAC-SHA256) ile şifreler.">
-        <div class="node root"><small>Siz</small><strong>Master password</strong><p>Hiçbir yerde saklanmaz.</p></div>
-        <div class="fork"></div>
-        <div class="branches">
-          <div class="branch">
-            <div class="node"><small><span lang="en">Argon2id</span> · tuz 1</small><strong>Doğrulama özeti</strong><p>Yalnızca "şifre doğru mu?" sorusunu yanıtlar.</p></div>
+      <div class="tour-grid">
+        <ol class="steps">
+          <li class="step on" data-pane="0">
+            <h3>Kasanın kilidini açın</h3>
+            <p>Kasayı yalnızca master password'ünüz açar. 3 yanlış denemeden sonra her denemede bekleme uzar (en fazla 5 dakika); uygulamayı kapatıp açmak süreyi sıfırlamaz.</p>
+            <div class="shot"><img src="/assets/screens/login.webp" width="950" height="670" loading="lazy" alt="Keyora giriş penceresi: master password alanı ve Kilidi Aç düğmesi"></div>
+          </li>
+          <li class="step" data-pane="1">
+            <h3>Aradığınızı bulun</h3>
+            <p>Uygulama adı, kullanıcı adı ya da kategoriyle arayın; liste siz yazarken süzülür. Şifreler listede maskelidir, göz simgesine basınca 10 saniyeliğine görünür.</p>
+            <div class="shot"><img src="/assets/screens/main.webp" width="1600" height="931" loading="lazy" alt="Keyora ana penceresi: solda kategoriler, sağda uygulama adı, kategori, kullanıcı adı ve maskeli şifreden oluşan kayıt satırları"></div>
+          </li>
+          <li class="step" data-pane="2">
+            <h3>Tek tıkla kopyalayın</h3>
+            <p>Kullanıcı adını ya da şifreyi kopyalayın. Kopyaladığınız şey 20 saniye sonra panodan silinir; Win+V geçmişine ve bulut panosuna düşmez.</p>
+            <div class="shot"><img src="/assets/screens/copy.webp" width="780" height="440" loading="lazy" alt="Kayıt satırında kullanıcı adı ve maskeli şifre alanları, yanlarında kopyala simgeleri"></div>
+          </li>
+          <li class="step" data-pane="3">
+            <h3>Zayıf şifreleri görün</h3>
+            <p>Şifre Sağlığı raporu zayıf (kısa ya da az karakter türü içeren), birden fazla hesapta tekrar kullanılan ve bir yıldır değişmeyen şifreleri listeler. Rapor tamamen bilgisayarınızda hesaplanır.</p>
+            <div class="shot"><img src="/assets/screens/health.webp" width="1200" height="867" loading="lazy" alt="Şifre Sağlığı raporu: yüzde 70 sağlık puanı; zayıf, tekrar kullanılan ve eski şifre sekmeleri"></div>
+          </li>
+          <li class="step" data-pane="4">
+            <h3>Şifrelerinizi taşıyın</h3>
+            <p>Chrome, Edge, Brave, Firefox, Bitwarden, KeePassXC, KeePass 2 ya da LastPass'ten aldığınız dışa aktarma dosyasını seçin. Keyora önce önizleme gösterir, aynı kayıtları atlar ve içe aktarmadan önce yedek alır. İki adımlı doğrulama (2FA) kodları bilerek aktarılmaz.</p>
+            <div class="shot"><img src="/assets/screens/import.webp" width="1200" height="1000" loading="lazy" alt="İçe Aktar penceresi: biçim rehberi ve beklenen kolonlar tablosu"></div>
+          </li>
+          <li class="step" data-pane="0">
+            <h3>Kilitleyip kalkın</h3>
+            <p>Ctrl+L ya da Kilitle düğmesi yeter. Windows kilitlenince (Win+L), uykuya geçince ya da uzak masaüstü bağlantısı kopunca Keyora da kilitlenir; boşta kalınca kendiliğinden kilitlenir.</p>
+          </li>
+        </ol>
+        <div class="screen" aria-hidden="true">
+          <div class="win">
+            <div class="bar"><img src="/assets/keyora.png" alt="" width="16" height="16">Keyora<span class="ctl"><i></i><i></i><i></i></span></div>
+            <div class="panes">
+              <div class="pane mid on"><img src="/assets/screens/login.webp" width="950" height="670" alt=""></div>
+              <div class="pane full"><img src="/assets/screens/main.webp" width="1600" height="931" alt=""></div>
+              <div class="pane zoom"><img src="/assets/screens/copy.webp" width="780" height="440" loading="lazy" alt=""></div>
+              <div class="pane mid"><img src="/assets/screens/health.webp" width="1200" height="867" loading="lazy" alt=""></div>
+              <div class="pane mid"><img src="/assets/screens/import.webp" width="1200" height="1000" loading="lazy" alt=""></div>
+            </div>
           </div>
-          <div class="branch">
-            <div class="node"><small><span lang="en">Argon2id</span> · tuz 2</small><strong>Şifreleme anahtarı</strong><p>64 MB bellek, 3 tur. Diske yazılmaz.</p></div>
-            <div class="wire"></div>
-            <div class="node ok"><small>Fernet</small><strong>Şifreli kayıtlar</strong><p>AES-128-CBC + HMAC-SHA256</p></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="facts">
-        <div class="fact reveal"><b>Ne şifreli?</b><p>Şifreler, uygulama adları, kullanıcı adları, notlar ve kategori adları. İçerik master password olmadan okunamaz.</p></div>
-        <div class="fact reveal"><b>Deneme koruması</b><p>3 yanlış denemeden sonra her denemede bekleme uzar (en fazla 5 dk). Uygulamayı kapatıp açmak süreyi sıfırlamaz.</p></div>
-        <div class="fact reveal"><b>Açık kaynak</b><p>Kodun tamamı GitHub'da. Ne yaptığını herkes okuyabilir, denetleyebilir.</p></div>
-      </div>
-      <p class="warn reveal"><strong>Bilerek böyle:</strong> master password'ünüzü unutursanız kasanız hiçbir şekilde açılamaz. Kurtarma e-postası ya da arka kapı yoktur. Master password'ünüzü güvenli bir yerde saklayın.</p>
-    </div>
-  </section>
-
-  <!-- ============ SAĞLIK + İÇE AKTARMA ============ -->
-  <section>
-    <div class="wrap">
-      <div class="split">
-        <div class="reveal">
-          <span class="eyebrow">Şifre Sağlığı</span>
-          <h2>Hangi şifrenin değişmesi gerektiğini <em>görün.</em></h2>
-          <p class="lede">Rapor kasanızı tarar ve sorunlu kayıtları listeler; tamamen bilgisayarınızda hesaplanır. Bir kayda çift tıklayıp hemen düzeltin.</p>
-          <ul class="checks">
-            <li><span><strong>Zayıf</strong> — kısa ya da çok az karakter türü içerenler</span></li>
-            <li><span><strong>Tekrar kullanılan</strong> — birden fazla hesapta aynı olanlar</span></li>
-            <li><span><strong>Eski</strong> — bir yıldır değiştirilmeyenler</span></li>
-          </ul>
-        </div>
-        <div class="window tilt reveal">
-          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>Şifre Sağlığı</span></div>
-          <img src="/assets/health-dark.png" width="900" height="650" loading="lazy" alt="Şifre Sağlığı raporu: yüzde 70 sağlık puanı; zayıf, tekrar kullanılan ve eski şifre sekmeleri">
-        </div>
-      </div>
-
-      <div class="split flip">
-        <div class="reveal">
-          <span class="eyebrow">İçe aktarma</span>
-          <h2>Şifrelerinizi <em>dakikalar içinde</em> taşıyın.</h2>
-          <p class="lede">Kullandığınız uygulamanın dışa aktarma dosyasını seçin. Keyora biçimi kendisi tanır, önce önizleme gösterir, aynı kayıtları atlar ve içe aktarmadan önce yedek alır.</p>
-          <div class="chips">
-            <span>Chrome</span><span>Edge</span><span>Brave</span><span>Firefox</span><span>Bitwarden</span><span>KeePassXC</span><span>KeePass 2</span><span>LastPass</span><span>CSV</span>
-          </div>
-        </div>
-        <div class="window tilt reveal">
-          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>İçe Aktar</span></div>
-          <img src="/assets/import-dark.png" width="900" height="750" loading="lazy" alt="İçe Aktar penceresi: biçim rehberi ve beklenen kolonlar tablosu">
+          <p class="screen-note">Arayüz yalnızca Türkçe.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ İNDİR ============ -->
-  <section id="indir" class="download">
+  <section class="details" aria-labelledby="ayrinti">
     <div class="wrap">
-      <div class="band reveal">
-        <img class="k" src="/assets/keyora.png" alt="" width="76" height="76">
-        <h2>Şifrelerinizi <em>geri alın.</em></h2>
-        <p class="lede">Ücretsiz. Kayıt, hesap ya da e-posta gerekmez. Kurulum yönetici izni istemez.</p>
+      <h2 id="ayrinti">Gözden kaçan yerlerde de dikkatli.</h2>
+      <dl>
+        <div><dt>Ekran paylaşımında görünmez</dt><dd>Ekran görüntüsü ve kayıt araçları Keyora penceresini göremez. Varsayılan olarak açıktır; Windows 10 2004 öncesinde pencere siyah görünür.</dd></div>
+        <div><dt>Otomatik yedek</dt><dd>Kasayı açınca günde bir kez, değişiklik yaptıysanız kilitlerken ya da kapatırken şifreli yedek alınır. Varsayılan olarak son 10 yedek saklanır.</dd></div>
+        <div><dt>Şifre geçmişi</dt><dd>Her kaydın son 5 şifresi saklanır; yanlışlıkla değiştirdiğiniz bir şifreyi geri bulursunuz.</dd></div>
+        <div><dt>Şifre üretici</dt><dd>Uzunluğu ve karakter türlerini seçin; şifre, işletim sisteminin güvenli rastgele sayı üreteciyle oluşturulur.</dd></div>
+        <div><dt>Koyu ve açık tema</dt><dd>İki pastel tema arasında anında geçiş yapın.</dd></div>
+        <div><dt>Kısayollar</dt><dd>Ctrl+N yeni kayıt, Ctrl+G şifre üretici, Ctrl+H Şifre Sağlığı, Ctrl+L kilit.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="vault" id="guvenlik" aria-labelledby="guvenlik-baslik">
+    <div class="wrap">
+      <h2 id="guvenlik-baslik">Anahtarınız nasıl oluşur?</h2>
+      <p class="lede">Keyora kendi şifreleme algoritmasını yazmaz; yaygın kullanılan, denetlenmiş kütüphanelere dayanır. Master password'ünüzden iki ayrı şey türetilir.</p>
+      <div class="vault-grid">
+        <ul class="tree">
+          <li><span class="k">master password</span><small>Hiçbir yerde saklanmaz.</small>
+            <ul>
+              <li><span class="via">Argon2id, tuz 1 →</span> <span class="k">doğrulama özeti</span><small>Yalnızca "şifre doğru mu?" sorusunu yanıtlar.</small></li>
+              <li><span class="via">Argon2id, tuz 2 →</span> <span class="k key">şifreleme anahtarı</span><small>64 MB bellek, 3 tur. Keyora anahtarı diske yazmaz.</small>
+                <ul>
+                  <li><span class="via">Fernet →</span> <span class="k ok">şifreli kayıtlar</span><small>AES-128-CBC ve HMAC-SHA256.</small></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="facts">
+          <div><h3>Ne şifreli?</h3><p>Şifreler, uygulama adları, kullanıcı adları, notlar ve kategori adları. İçerik master password olmadan okunamaz. Kayıt sayısı ve tarihler gibi bazı bilgiler dosyada şifresizdir.</p></div>
+          <div><h3>Deneme koruması</h3><p>3 yanlış denemeden sonra her denemede bekleme uzar, en fazla 5 dakikaya kadar.</p></div>
+          <div><h3>Açık kaynak</h3><p>Kodun tamamı <a href="https://github.com/emreayhn/keyora">GitHub'da</a>. Ne yaptığını herkes okuyup denetleyebilir.</p></div>
+        </div>
+      </div>
+      <p class="warn"><strong>Bilerek böyle:</strong> master password'ünüzü unutursanız kasanız hiçbir şekilde açılamaz. Kurtarma e-postası ya da arka kapı yoktur. Master password'ünüzü güvenli bir yerde saklayın.</p>
+    </div>
+  </section>
+
+  <section class="get" id="indir" aria-labelledby="indir-baslik">
+    <div class="wrap">
+      <img class="k" src="/assets/keyora.png" alt="" width="96" height="96">
+      <h2 id="indir-baslik">Şifrelerinizi geri alın.</h2>
+      <div class="rest">
+        <p>Ücretsiz. Kayıt, hesap ya da e-posta gerekmez. Windows 10 (1809) veya 11, 64 bit.</p>
         <div class="cta">
-          <a class="btn primary" href="https://github.com/emreayhn/keyora/releases/download/v1.2.1/Keyora-Setup-1.2.1.exe">
+          <a class="btn" href="https://github.com/emreayhn/keyora/releases/download/v1.2.1/Keyora-Setup-1.2.1.exe">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
-            Keyora'yı indir
+            Keyora 1.2.1'i indir
           </a>
+          <a class="link" href="https://github.com/emreayhn/keyora/releases">Tüm sürümler ve sürüm notları</a>
         </div>
-        <p class="alt">Windows 10 (1809) veya 11, 64-bit · <a href="https://github.com/emreayhn/keyora/releases">Tüm sürümler ve sürüm notları</a></p>
       </div>
     </div>
   </section>
 
-  <!-- ============ SSS ============ -->
-  <section id="sss">
+  <section class="faq" id="sss" aria-labelledby="sss-baslik">
     <div class="wrap">
-      <div class="head center reveal">
-        <span class="eyebrow">SSS</span>
-        <h2>Aklınıza takılanlar</h2>
-      </div>
-      <div class="faq reveal">
+      <h2 id="sss-baslik">Aklınıza takılanlar</h2>
+      <div>
         <details>
           <summary>Verilerim nerede duruyor?</summary>
           <p>Kasanız <code>%LOCALAPPDATA%\Keyora\keyora.db</code> dosyasındadır, yani Windows kullanıcı klasörünüzde. Programı nereye kurarsanız kurun aynı dosyayı kullanır. Kayıtlarınızın içeriği şifrelidir; master password olmadan okunamaz.</p>
@@ -302,7 +203,7 @@
         </details>
         <details>
           <summary>Windows "bilinmeyen yayıncı" uyarısı veriyor, güvenli mi?</summary>
-          <p>Uyarı, dosyanın ücretli bir kod imzalama sertifikasıyla imzalanmamış olmasından kaynaklanır; uygulamanın kendisiyle ilgili değildir. "Daha fazla bilgi → Yine de çalıştır" ile devam edebilirsiniz. Kaynak kodun tamamı GitHub'da açıktır.</p>
+          <p>Uyarı, dosyanın ücretli bir kod imzalama sertifikasıyla imzalanmamış olmasından kaynaklanır; uygulamanın kendisiyle ilgili değildir. "Daha fazla bilgi", ardından "Yine de çalıştır" ile devam edebilirsiniz. Kaynak kodun tamamı GitHub'da açıktır.</p>
         </details>
         <details>
           <summary>Programı kaldırırsam şifrelerim silinir mi?</summary>
@@ -333,7 +234,7 @@
       <a href="https://github.com/emreayhn/keyora/releases">Sürümler</a>
       <a href="/en/" hreflang="en" lang="en">English</a>
     </nav>
-    <span>© 2026 Emre Ayhan · MIT lisansı</span>
+    <span class="copy">© 2026 Emre Ayhan. MIT lisansı.</span>
   </div>
 </footer>
 

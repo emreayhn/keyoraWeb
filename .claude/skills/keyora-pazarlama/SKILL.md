@@ -17,29 +17,41 @@ Sayfanın tek işi: ziyaretçiyi **"şifrelerim neden bir şirketin sunucusunda?
 - **Kişilik:** küçük, dürüst, kontrol kullanıcıda. "Biz" yerine ürünü ve kullanıcıyı öne çıkar.
 - **Yasak kelimeler:** "kırılamaz", "%100 güvenli", "askeri düzey", "hacklenemez", "en iyi".
 
-## 2. Görsel dil (tanıtım videosundan — `keyoraVideo/keyora-tur` HyperFrames projesi, eski Remotion projesi `keyoraVideo/keyoraVideo`)
+## 2. Görsel dil
+
+İki ayrı yüzey var; ikisi de uygulamanın kendi iki temasından türer.
+
+**Tanıtım sayfası (2026-10 yeniden tasarım):** açık zemin = dünya, koyu panel = kasa.
+Sayfa açık temada; adres çubuğu, ekran görüntüsü penceresi ve Güvenlik bölümü koyu (kasa).
 
 | Token | Renk | Kullanım |
 |---|---|---|
-| bg | `#15101e` | sayfa zemini (yalnızca koyu tema — bilinçli karar) |
-| bgSoft | `#1f1730` | bant / bölüm zemini |
-| card | `#2a1f3d` | kartlar |
-| cardBorder | `#3a2c52` | kenarlıklar |
-| accent | `#f0a5bc` | vurgu, birincil düğme zemini (üstünde koyu metin) |
-| accentDeep | `#d87aa0` | hover, degrade ucu |
-| accentSoft | `#ffd3df` | parıltı, ince vurgu |
-| text / textMuted / textDim | `#f7eef2` / `#b9a8c2` / `#7c6c8f` | metin hiyerarşisi (textDim yalnızca süs; okunacak metinde kullanma) |
-| success | `#a5e8c4` | "0 bayt dışarı" gibi olumlu durumlar |
+| paper / paper-2 | `#f3edf0` / `#e9e0e5` | sayfa ve bant zemini (uygulamanın açık temasındaki pembe panelden) |
+| line | `#d8ccd2` | ince çizgiler |
+| ink / ink-soft | `#2a2335` / `#5d5469` | metin; birincil düğme zemini ink |
+| rose | `#a84a62` | açık zeminde vurgu (risk soruları, odak çerçevesi) |
+| vault / vault-2 / vault-line | `#1f1d2e` / `#2b2842` / `#3e3b58` | koyu kasa panelleri (uygulamanın koyu teması) |
+| vault-text / vault-muted | `#ece8f0` / `#a7a0b5` | koyu panel metni |
+| petal / mint | `#e8a0b5` / `#a8d8b9` | yalnızca koyu panelde vurgu (`keyora.db`, anahtar) ve olumlu durum |
 
+- **Tek gösterişli an:** hero'da "Şifreleriniz nerede?" sorusunun cevabı bir Windows dosya yolu
+  (`C:\Users\siz\AppData\Local\Keyora\keyora.db`) olarak harf harf yazılır. Başka giriş animasyonu ekleme;
+  kaydırınca beliren bölümler, parıltılar, cam kartlar, bento ızgara bilerek yok.
+- **Kaçınılanlar:** başlıkta tek kelimeyi italik/renkli vurgulamak, büyük harfli üst etiketler (eyebrow),
+  "A · B · C" ara noktalı meta satırları, bağlantı sonuna "→", mac pencere noktaları (uygulama Windows'ta:
+  pencere denetimleri sağda). Numara yalnızca gerçekten sıralı içerikte (Nasıl çalışır adımları).
 - **Tipografi:** Fontlar sitede barındırılır (`assets/fonts/`, woff2, latin + latin-ext alt kümeleri,
   OFL lisansları yanında; CSP `font-src 'self'`). Google Fonts'a ya da başka CDN'e bağlantı verilmez.
-  Başlık: `Fraunces` (değişken, opsz + 400–700, italik) — vurgulu kelime italik + accent degrade.
-  Gövde: `Instrument Sans` (400–700). Teknik etiketler: `Cascadia Mono`, `Consolas` (sistem).
+  Başlık: `Fraunces` (opsz yüksek, 600, sıkı aralık). Gövde: `Instrument Sans` (400–700).
+  Dosya yolu ve kod: `Cascadia Mono` (Windows Terminal'in fontu; yalnızca yol/kod için, etiket süsü olarak değil).
   Inter, Roboto, Arial, Space Grotesk kullanma. Yeni font eklerken Türkçe karakterleri (ş ğ ı İ ç ö ü) kontrol et;
-  `text-transform: uppercase` olan etiketlerde "Argon2id" gibi İngilizce terimleri `lang="en"` ile sar (yoksa "ARGON2İD" olur).
-- **Atmosfer:** koyu mürdüm zemin, pembe radyal parıltılar, ince tanecik (grain, `assets/noise.svg`),
-  cam (glass) kartlar. Tek, iyi kurgulanmış yükleme animasyonu + kaydırınca beliren bölümler;
-  `prefers-reduced-motion` açıksa animasyon ve otomatik video oynatma kapanır.
+  `text-transform: uppercase` kullanırsan "Argon2id" gibi İngilizce terimleri `lang="en"` ile sar (yoksa "ARGON2İD" olur).
+- **Ekran görüntüleri:** `assets/screens/*.webp`, 2× çözünürlükte, sahte verili deneme kasasından
+  (`keyoraVideo/keyora-tur/tools/demo_shots.py` gerçek kasaya dokunmaz).
+- `prefers-reduced-motion` açıksa yazma animasyonu ve otomatik video oynatma kapanır.
+
+**Tanıtım videosu (`keyoraVideo/keyora-tur`, HyperFrames):** koyu mürdüm zemin `#15101e`, kart `#2a1f3d`,
+vurgu `#f0a5bc`, başarı `#a5e8c4`; aynı üç font. 9:16 ve 1:1 (`keyora-tur-1x1`) sürümleri var.
 
 ## 3. Doğrulanmış iddialar (yalnızca bunları kullan)
 
@@ -70,14 +82,12 @@ Her iddia `C:\gitHub\keyora` kodunda doğrulandı (sürüm 1.2.1). Yeni iddia ek
 
 ## 4. Sayfa yapısı (dönüşüm sırası)
 
-1. **Hero** — slogan, tek cümlelik vaat, İndir (birincil) + GitHub (ikincil), güven şeridi, video.
-2. **Sorun** — "Şirket kapanırsa? Sunucu ihlal edilirse? Hesabınız silinirse?" → cevap.
-3. **Ürün** — gerçek ekran görüntüsü + numaralı açıklamalar.
-4. **Özellikler** — bento ızgara, en güçlü 3 özellik büyük kartta.
-5. **Güvenlik** — anahtar türetme şeması (master password → 2× Argon2id → doğrulama / Fernet anahtarı).
-6. **Sağlık + İçe aktarma** — itiraz kırıcı: "geçiş zor olur" korkusunu gider.
-7. **İndir** bandı — tekrar CTA.
-8. **SSS** — itirazlar: veri nerede, bulut yok mu, SmartScreen uyarısı, kaldırınca ne olur, 2FA.
+1. **Hero** — "Şifreleriniz nerede?" + cevap olarak dosya yolu, İndir (birincil) + GitHub (metin bağlantısı), 1:1 video.
+2. **Nasıl çalışır** — 6 adım; geniş ekranda sağda sabit uygulama penceresi adıma göre ekran değiştirir.
+3. **Ayrıntılar** — tanım listesi (ekran paylaşımı, yedek, geçmiş, üretici, tema, kısayollar).
+4. **Güvenlik** (koyu kasa bölümü) — anahtar türetme ağacı, ne şifreli, deneme koruması, açık kaynak, kurtarma yok uyarısı.
+5. **İndir** — tekrar CTA.
+6. **SSS** — veri nerede, bulut yok mu, SmartScreen uyarısı, kaldırınca ne olur, 1.0.0 geçişi, 2FA, ücret/veri.
 
 ## 5. Kurallar
 
@@ -88,4 +98,4 @@ Her iddia `C:\gitHub\keyora` kodunda doğrulandı (sürüm 1.2.1). Yeni iddia ek
   gerçek kasa asla.
 - Yeni sürümde: iki sayfadaki sürüm numarası ve indirme bağlantıları (`releases/download/vX.Y.Z/...`).
 - Okunabilirlik: gövde metni kontrastı ≥ 4.5:1; düğme metni ≥ 4.5:1.
-- Teslimden önce: masaüstü (1280) ve telefon (375) genişliğinde ekran görüntüsü alıp bak.
+- Teslimden önce: masaüstü (1440) ve telefon (375) genişliğinde ekran görüntüsü alıp bak.
