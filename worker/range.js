@@ -7,7 +7,8 @@ export default {
 
     const range = request.headers.get("Range");
     const m = range && /^bytes=(\d*)-(\d*)$/.exec(range.trim());
-    if (!m || (m[1] === "" && m[2] === "")) {
+    // HEAD isteğinin gövdesi boş gelir; parçalamak yerine tam yanıtı döndür.
+    if (request.method !== "GET" || !m || (m[1] === "" && m[2] === "")) {
       const full = new Response(res.body, res);
       full.headers.set("Accept-Ranges", "bytes");
       return full;
