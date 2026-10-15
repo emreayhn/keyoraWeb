@@ -1,0 +1,9 @@
+// Cloudflare Workers: yalnızca statik dosyalar (betik/sunucu kodu yok).
+// public/ olduğu gibi yayınlanır; güvenlik başlıkları public/_headers dosyasından gelir.
+{
+  "name": "keyoraweb",
+  "compatibility_date": "2026-10-15",
+  "assets": {
+    "directory": "./public"
+  }
+}
